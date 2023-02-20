@@ -3,17 +3,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DotnetClassRecordStruct.Controllers;
 
-public class StructController : BaseController
+public class RecordStructController : BaseController
 {
     [HttpGet]
     public IActionResult Get()
-        => Ok(new InfoOutput("It's allocated in STACK memory, that's really faster than HEAP one."));
+        => Ok(new InfoOutput("It's allocated in STACK memory."));
 
     [HttpGet("when-use")]
     public IActionResult WhenUse()
-        => Ok(new InfoOutput("To encapsulate a small amount of data, lightweight objects that are frequently created and destroyed."));
+        => Ok(new InfoOutput("To encapsulate a small amount of data, lightweight objects that are frequently created and destroyed. It's 20% faster than only structs."));
 
-    private struct InfoOutput
+    private record struct InfoOutput
     {
         public InfoOutput(string info)
         {
