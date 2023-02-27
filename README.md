@@ -1,4 +1,4 @@
-# .NET 6 (MINIMAL API) + (CLASS - RECORD - STRUCT)
+# .NET 6 + (CLASS - RECORD - STRUCT)
 
 A simple project to study some types of data structure and when to use them.
 
